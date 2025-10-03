@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --second-bg-color: #f8fafc;
+    --text-color: #334155;
+    --main-color: #1e3a8a;
+    --bright-blue: #3b82f6;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --card-hover-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+#scene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: transparent;
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin: 0 2rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 6.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.home-content h1 .greeting {
+    font-size: 2.8rem;
+    color: var(--text-color);
+    font-weight: 700;
+    vertical-align: middle;
+    margin-right: 1.5rem;
+}
+
+.home-content h1 .name-gradient {
+    background: linear-gradient(90deg, var(--main-color), var(--bright-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.home-content h3 {
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+
+.know-more-btn {
+    border: 2px solid var(--main-color);
+    background: transparent;
+    color: var(--main-color);
+    margin-top: 4rem;
+    padding: 1.2rem 3.5rem;
+    font-size: 1.8rem;
+}
+
+.know-more-btn:hover {
+    color: #ffffff;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    /* ADDED: This brings back your blue gradient background */
+    background: linear-gradient(
+        to right,
+        #0d2394,
+        #3b60f6,
+        #3b60f6
+    );
+}
+
+.about-img img {
+    width: 25vw;
+    max-width: 350px;
+    border-radius: 2rem;
+    box-shadow: var(--card-shadow);
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 5rem;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+    /* ADDED: This makes the heading text white again */
+    color: #f8fafc;
+}
+
+.about-content p {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    /* ADDED: This makes the paragraph text white again */
+    color: #f8fafc;
+}
+
+.about-content span {
+    color: var(--bright-blue);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.education-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* --- FINAL FIX --- */
+/* This rule applies the frosted glass effect to all the content cards */
+.skill-category,
+.project-entry,
+.education-entry {
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* For Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* --- END OF FIX --- */
+
+.skill-category {
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.skill-category h3 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category ul li {
+    font-size: 1.6rem;
+    padding: 0.8rem 0;
+}
+
+.project-entry {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.project-image img {
+    width: 250px;
+    border-radius: 1rem;
+}
+
+.project-details {
+    flex: 1;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+}
+
+.project-details h4 {
+    font-size: 2.4rem;
+    color: var(--main-color);
+}
+
+.project-date {
+    font-size: 1.4rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.project-description {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.repo-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    border: 2px solid var(--main-color);
+    background: transparent;
+    color: var(--main-color);
+}
+.repo-btn i { margin-left: 0.5rem; }
+.repo-btn:hover {
+    color: #ffffff;
+}
+
+.education {
+    padding: 10rem 4% 2rem;
+}
+
+.education-entry {
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.education-logo img {
+    width: 100px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 0.5rem;
+}
+
+.education-details h3 {
+    font-size: 2.2rem;
+    color: var(--main-color);
+}
+
+.education-details p {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+}
+
+.education-date {
+    font-size: 1.4rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.coursework-btn {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    border: 2px solid var(--main-color);
+    background: transparent;
+    color: var(--main-color);
+    cursor: pointer;
+}
+.coursework-btn:hover {
+    color: #ffffff;
+}
+
+.coursework-list {
+    list-style-position: inside;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+.coursework-list.visible {
+    display: block;
+    max-height: 200px;
+}
+
+.contact {
+    min-height: auto;
+    padding: 4rem 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(45deg, #1e3a8a 0%, #3b82f6 100%);
+}
+
+.contact-social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+    background: transparent;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    font-size: 4rem;
+    color: #ffffff;
+    margin: 0 1.5rem;
+    transition: .3s ease;
+}
+
+.contact-social-media a:hover {
+    background: #ffffff;
+    color: var(--main-color);
+    box-shadow: 0 0 1.5rem #ffffff;
+    transform: translateY(-5px);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: #1c1c1c;
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: #ffffff;
+}
+
+.contact .heading span {
+    color: #ffffff;
+}
+
+.contact-intro {
+    padding: 15rem 9% 4rem;
+    text-align: center;
+}
+
+.contact-intro h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.education,
+.contact-intro,
+.contact,
+.footer {
+    min-height: auto;
+}
+
+.btn-liquid-fill {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+  color: #001233; /* initial text color */
+  transition: color 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+/* Pseudo-element is always present */
+.btn-liquid-fill::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; shorthand */
+  background: linear-gradient(120deg, #001233, #0048A8, #48CAE4);
+  
+  /* Initial state: fully collapsed */
+  transform: scaleX(0);
+  transform-origin: left;
+  
+  /* This is crucial: animate transform in BOTH directions */
+  transition: transform 0.4s ease-in-out;
+  
+  z-index: -1;
+}
+
+/* Hover state: fill expands smoothly */
+.btn-liquid-fill:hover::after {
+  transform: scaleX(1);
+}
+
+/* Text turns white on hover */
+.btn-liquid-fill:hover {
+  color: #ffffff;
+}
+

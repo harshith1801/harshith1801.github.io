@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshith Chejerla | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>
+                <span class="greeting">Hello! My name is </span> 
+                <span class="name-gradient">Harshith Chejerla.</span>
+            </h1>
+            <h3>I am a Data <span class="multiple-text"></span></h3>
+            <a href="#about" class="btn know-more-btn">Know More</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="https://via.placeholder.com/400" alt="Harshith Chejerla">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">ABOUT <span>ME</span></h2>
+            <p>
+                I am currently pursuing a Master of Science in Data Science at the University of Maryland, building on my Bachelor's degree in Computer Science and Engineering. My experience as a Data Analyst Intern at Zintec Software allowed me to build automated data pipelines, create real-time dashboards with Power BI, and significantly reduce manual reporting efforts. I am proficient in a range of technologies including Python, SQL, AWS, and Tableau, and I am passionate about applying machine learning to solve complex problems.
+            </p>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">TECHNICAL <span>SKILLS</span></h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>C / C++</li>
+                    <li>R Studio</li>
+                    <li>Node.js</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Data Science & ML</h3>
+                <ul>
+                    <li>Big Data Analytics</li>
+                    <li>NLP</li>
+                    <li>Time Series Analysis</li>
+                    <li>Probability & Statistics</li>
+                    <li>Tensor Flow</li>
+                    <li>Scikit-learn</li>
+                    <li>PyTorch</li> 
+                    <li>Keras</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Platforms & Databases</h3>
+                <ul>
+                    <li>GitHub</li>
+                    <li>Docker</li>
+                    <li>Hadoop</li>
+                    <li>HTML / CSS</li>
+                    <li>MongoDB</li>
+                    <li>PostgreSQL</li>
+                    <li>AWS</li>
+                    <li>Microsoft Azure</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Visualization & Tools</h3>
+                <ul>
+                    <li>Tableau</li>
+                    <li>Power BI</li>
+                    <li>MATLAB</li>
+                    <li>MS Excel</li>
+                    <li>Visual Studio</li>
+                    <li>Adobe Illustrator</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading"><span>PROJECTS</span></h2>
+        <div class="projects-list">
+            <div class="project-entry">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/300x200?text=Bitcoin+Analysis" alt="Bitcoin Analysis Project">
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h4>Real-Time Bitcoin Price Analysis</h4>
+                        <p class="project-date">Jan 2025 - May 2025</p>
+                    </div>
+                    <p class="project-description">Designed and implemented a real-time forecasting pipeline using OpenRefine for data cleaning and Prophet for time series prediction on Bitcoin data from the KuCoin API.</p>
+                    <a href="#" class="btn repo-btn">View Repository <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="project-entry">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/300x200?text=MNIST+Digits" alt="MNIST Project">
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h4>MNIST Digit Classification</h4>
+                        <p class="project-date">Mar 2025 - May 2025</p>
+                    </div>
+                    <p class="project-description">Applied K-Nearest Neighbors (KNN) and K-Means clustering in MATLAB to classify MNIST digits, achieving up to 96.8% accuracy with optimized training size and distance metrics.</p>
+                    <a href="#" class="btn repo-btn">View Repository <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="project-entry">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/300x200?text=Hate+Speech+AI" alt="Hate Speech Detection Project">
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h4>Implicit Hate Speech Detection</h4>
+                        <p class="project-date">Sept 2024 - Dec 2024</p>
+                    </div>
+                    <p class="project-description">Designed a classification model using BERT for feature extraction and advanced data augmentation techniques to detect implicit hate speech, surpassing existing benchmarks.</p>
+                    <a href="#" class="btn repo-btn">View Repository <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="project-entry">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/300x200?text=IoT+Security" alt="IoT Malware Detection Project">
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h4>Robust Malware Detection for IoT</h4>
+                        <p class="project-date">Aug 2023 - Mar 2024</p>
+                    </div>
+                    <p class="project-description">Implemented a malware detection system for IoT devices using Deep Eigenspace Learning and CNNs, achieving over 99% detection accuracy against advanced obfuscation.</p>
+                    <a href="#" class="btn repo-btn">View Repository <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="heading"><span>EDUCATION</span></h2>
+        <div class="education-container">
+            <div class="education-entry">
+                <div class="education-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/University_of_Maryland_seal.svg/200px-University_of_Maryland_seal.svg.png" alt="UMD Logo">
+                </div>
+                <div class="education-details">
+                    <h3>University of Maryland, College Park</h3>
+                    <p>Master of Science in Data Science</p>
+                    <p class="education-date">Expected May 2026</p>
+                    <button class="btn coursework-btn">Show Coursework</button>
+                    <ul class="coursework-list">
+                        <li>Algorithms for Data Science</li>
+                        <li>Big Data Systems</li>
+                        <li>Data Representation and Modeling</li>
+                        <li>Time Series Analysis</li>
+                        <li>Probability & Statistics</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="education-entry">

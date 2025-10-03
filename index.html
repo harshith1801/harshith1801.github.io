@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshith Chejerla | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+
+<canvas id="scene"></canvas>
+
+<script type="x-shader/x-vertex" id="wrapVertexShader">
+    #define PI 3.1415926535897932384626433832795
+    attribute float size;
+    void main() {
+        vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+        gl_PointSize = 3.0;
+        gl_Position = projectionMatrix * mvPosition;
+    }
+</script>
+<script type="x-shader/x-fragment" id="wrapFragmentShader">
+    uniform sampler2D texture;
+    void main(){
+        vec4 textureColor = texture2D( texture, gl_PointCoord );
+        if ( textureColor.a < 0.3 ) discard;
+        /* This is the color of the dots. I've changed it to a blue that matches your site */
+        vec4 dotColor = vec4(0.23, 0.51, 0.96, 1.0);
+        vec4 color = dotColor * textureColor;
+        gl_FragColor = color;
+    }
+</script>
+	
+   
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+    <div class="home-content">
+        <h1>
+            <span class="greeting">Hello! My name is </span> 
+            <span class="name-gradient">Harshith Chejerla.</span>
+        </h1>
+        <h3>I am a Data <span class="multiple-text"></span></h3>
+        <a href="#about" class="btn know-more-btn btn-liquid-fill">Know More</a>
+    </div>
+</section>
+
+
+    <section class="about" id="about">
+	
+        <div class="about-img">
+            <img src="photo.jpeg" alt="Harshith Chejerla"">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">ABOUT <span>ME</span></h2>
+            <p>
+                I am a Data Science graduate student at the University of Maryland, committed to bridging the gap between complex Data & AI-systems, and everyday users by making technology more intuitive and approachable. I love the challenge of turning chaos into clarity, finding hidden patterns in messy data, breaking down complex problems, and shaping them into solutions that work while telling a meaningful story. 
+ </p>
+
+
+ <p>
+Over the past few years, I’ve worked on projects and collaborated with professional teams that gave me exposure to real-world challenges across industries, from building automated data pipelines and dashboards to tackling problems in natural language processing, computer vision, and time series forecasting. These experiences taught me that data is rarely clean or straightforward; it’s often messy, unpredictable, and layered with complexity. What I enjoy most is taking on that challenge, using the right tools and approaches to turn raw information into insights and solutions that drive impactful outcomes.
+            </p>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">TECHNICAL <span>SKILLS</span></h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>C / C++</li>
+                    <li>R Studio</li>
+                    <li>Node.js</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Data Science & ML</h3>
+                <ul>
+                    <li>Big Data Analytics</li>
+                    <li>NLP</li>
+                    <li>Time Series Analysis</li>
+                    <li>Probability & Statistics</li>
+                    <li>Tensor Flow</li>
+                    <li>Scikit-learn</li>
+                    <li>PyTorch</li> 
+                    <li>Keras</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Platforms & Databases</h3>
+                <ul>
+                    <li>GitHub</li>
+                    <li>Docker</li>
+                    <li>Hadoop</li>
+                    <li>HTML / CSS</li>
+                    <li>MongoDB</li>
+                    <li>PostgreSQL</li>
+                    <li>AWS</li>
+                    <li>Microsoft Azure</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Visualization & Tools</h3>
+                <ul>
+                    <li>Tableau</li>
+                    <li>Power BI</li>
+                    <li>MATLAB</li>
+                    <li>MS Excel</li>
+                    <li>Visual Studio</li>
+                    <li>Adobe Illustrator</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="heading"><span>PROJECTS</span></h2>
+        <div class="projects-list">
+            <div class="project-entry">
+                <div class="project-image">
+                    <img src="bitcoinlogo.png" alt="Bitcoin Analysis Project">
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h4>Real-Time Bitcoin Price Analysis</h4>
+                        <p class="project-date">Jan 2025 - May 2025</p>
+                    </div>
+                    <p class="project-description">Designed and implemented a real-time forecasting pipeline using OpenRefine for data cleaning and Prophet for time series prediction on Bitcoin data from the KuCoin API.</p>
+                    <a href="https://github.com/harshith1801/Real-Time-Bitcoin-Price-Analysis-using-OpenRefine.git" target="_blank" class="btn repo-btn btn-liquid-fill">View Repository <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="project-entry">
+                <div class="project-image">
+                    <img src="mnistlogo.png" alt="MNIST Project">
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h4>MNIST Digit Classification</h4>
+                        <p class="project-date">Mar 2025 - May 2025</p>
+                    </div>
+                    <p class="project-description">Applied K-Nearest Neighbors (KNN) and K-Means clustering in MATLAB to classify MNIST digits, achieving up to 96.8% accuracy with optimized training size and distance metrics.</p>
+                    <a href="https://github.com/harshith1801/Comprehensive-MNIST-Analysis.git" target="_blank" class="btn repo-btn btn-liquid-fill">View Repository <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="project-entry">
+                <div class="project-image">
+                    <img src="hatespeechlogo.png" alt="Hate Speech Detection Project">
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h4>Implicit Hate Speech Detection</h4>
+                        <p class="project-date">Sept 2024 - Dec 2024</p>
+                    </div>
+                    <p class="project-description">Designed a classification model using BERT for feature extraction and advanced data augmentation techniques to detect implicit hate speech, surpassing existing benchmarks.</p>
+                    <a href="https://github.com/harshith1801/Implicit-Hate-Speech-Detection.git" target="_blank" class="btn repo-btn btn-liquid-fill">View Repository <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="project-entry">
+                <div class="project-image">
+                    <img src="malwarelogo.png" alt="IoT Malware Detection Project">
+                </div>
+                <div class="project-details">
+                    <div class="project-header">
+                        <h4>Robust Malware Detection for IoT</h4>
+                        <p class="project-date">Aug 2023 - Mar 2024</p>
+                    </div>
+                    <p class="project-description">Implemented a malware detection system for IoT devices using Deep Eigenspace Learning and CNNs, achieving over 99% detection accuracy against advanced obfuscation.</p>
+                    <a href="https://github.com/harshith1801/Robust-Malware-Detection.git" target="_blank" class="btn repo-btn btn-liquid-fill">View Repository <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="heading"><span>EDUCATION</span></h2>
+        <div class="education-container">
+            <div class="education-entry">
+                <div class="education-logo">
+                    <img src="UMDlogo.jpeg" alt="UMD Logo">
+                </div>
+                <div class="education-details">
+                    <h3>University of Maryland, College Park</h3>
+                    <p>Master of Science in Data Science</p>
+                    <p class="education-date">Expected May 2026</p>
+                    <button class="btn coursework-btn btn-liquid-fill">Show Coursework</button>
+                    <ul class="coursework-list">
+                        <li>Algorithms for Data Science</li>
+                        <li>Big Data Systems</li>
+                        <li>Data Representation and Modeling</li>
+                        <li>Time Series Analysis</li>
+                        <li>Probability & Statistics</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="education-entry">
+                <div class="education-logo">
+                     <img src="vnrlogo.jpeg" alt="VNRVJIET Logo">
+                </div>
+                <div class="education-details">
+                    <h3>VNRVJIET, Hyderabad</h3>
+                    <p>Bachelor of Technology in Computer Science</p>
+                    <p class="education-date">Aug 2020 - May 2024</p>
+                    <button class="btn coursework-btn btn-liquid-fill">Show Coursework</button>
+                    <ul class="coursework-list">
+                        <li>Machine Learning</li>
+                        <li>Big Data Analytics</li>
+                        <li>Data Structures</li>
+                        <li>Natural Language Processing</li>
+                        <li>Cloud Computing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-intro">
+    <h2 class="heading">CONTACT</h2>
+    <h3>I'm actively seeking opportunities where I can leverage my skills in data to create dynamic impact.</h3>
+    <h3>Let's connect and work together! </h3>
+</section>
+
+<section class="contact" id="contact">
+    <div class="contact-social-media">
+        <a href="https://www.linkedin.com/in/harshith-chejerla" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/harshith1801" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:harcheje@umd.edu" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+</section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by Harshith Chejerla | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r110/three.min.js"></script>
+<script src="background.js"></script>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
