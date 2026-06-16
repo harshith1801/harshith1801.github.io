@@ -152,6 +152,10 @@ section {
     color: var(--main-color);
 }
 
+.about-black {
+    color: #000000 !important;
+}
+
 .about-content h2 {
     text-align: left;
     line-height: 1.2;
@@ -533,4 +537,19 @@ section {
     font-size: 1.6rem;
     margin-bottom: 1rem;
 }
+
+
+
+.skill-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.skill-columns ul {
+    flex: 1;
+    margin: 0;
+    padding-left: 0;
+}
+
 

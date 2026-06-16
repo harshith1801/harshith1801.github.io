@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Home Page Typing Animation
     const typed = new Typed('.multiple-text', {
-        strings: ['Scientist.', 'Analyst.', 'Engineer.'],
-        typeSpeed: 100,
-        backSpeed: 70,
+        strings: ['Data Scientist.', 'Data Analyst.', 'Data Engineer.', 'Machine Learning Engineer.'],
+        typeSpeed: 50,
+        backSpeed: 40,
         backDelay: 1000,
         loop: true
     });
